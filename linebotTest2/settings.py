@@ -24,7 +24,7 @@ SECRET_KEY = 'h-sx8$^*hh&jkhf@18vet#jhl1yc6971$tgipr*wxq+doiqnv5'
 LINE_CHANNEL_ACCESS_TOKEN="d6LDOh0pCbl0oMEoJ9Y/Xitg1GYf7ZzTFQpFxf6Cn+qZSrSMYXDmEZp6bzAkwOmm/KhgXcZYf1K4NH3UGcK20syEZLbP1YyR97wBmABazofnfHXmDSbJW7/ublngiCr0eE8K9sCt/uh8wVbWiHR/rgdB04t89/1O/w1cDnyilFU="
 LINE_CHANNEL_SECRET="d5481a7e604dc1266a2caad67a5bc0e7"
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ["*"]
 
