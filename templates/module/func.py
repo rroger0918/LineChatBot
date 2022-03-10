@@ -37,110 +37,88 @@ def sendFlex(event):
     except:
         line_bot_api.reply_message(
             event.reply_token, TextSendMessage(text='發生錯誤！'))
-#學長姐分享
+#網頁介紹
 def share(event):
     try:
         message = TemplateSendMessage(
-            alt_text='學長姐分享呦 !',
+            alt_text='相關網頁 !',
             template=CarouselTemplate(
                 columns=[
                     CarouselColumn(
-                        thumbnail_image_url='https://upload.cc/i1/2021/05/11/W4Hmlo.jpg',
-                        title='勤業眾信  --全球知名四大會計事務所',
+                        thumbnail_image_url='https://upload.cc/i1/2022/03/11/0hTPS2.jpg',
+                        title='系友交流 -- 知識管理',
                         text='Adam Wang',
                         actions=[
-                            MessageTemplateAction(
-                                label='☞ 資安顧問請益',
-                                text='賣披薩'
-                            ),
                             URITemplateAction(
-                                label='☞ 面試流程益',
-                                uri='http://www.e-happy.com.tw'
+                                label='☞ Share knowledge with us right now !',
+                                uri='https://sharethu.azurewebsites.net/'
                             ),
-                            PostbackTemplateAction(
-                                label='☞ 拳擊交流',
-                                data='action=sell&item=披薩'
-                            ),
+                            # PostbackTemplateAction(
+                            #     label='☞ 拳擊交流',
+                            #     data='action=sell&item=安安'
+                            # ),
                         ]
                     ),
                     CarouselColumn(
-                        thumbnail_image_url='https://upload.cc/i1/2021/05/11/4E3SMG.jpg',
-                        title='國家資訊處  --銅牆鐵壁的資訊防護網',
+                        thumbnail_image_url='https://upload.cc/i1/2022/03/11/EOJFym.jpg',
+                        title='AI研討會 -- 活動資訊 & 報名表',
                         text='Wenna Zhang',
                         actions=[
-                            MessageTemplateAction(
-                                label='☞ 高普考請益',
-                                text='賣飲料'
-                            ),
                             URITemplateAction(
-                                label='☞ 機關單位請益',
-                                uri='http://www.ntu.edu.tw'
-                            ),
-                            PostbackTemplateAction(
-                                label='☞ 韓劇請益',
-                                data='action=sell&item=飲料'
+                                label='☞ AI東海，贏戰未來 !',
+                                uri='https://thuform20211220233251.azurewebsites.net/'
                             ),
                         ]
                     ),
                     CarouselColumn(
-                        thumbnail_image_url='https://mon-0815.herokuapp.com/images/c.JPG',
-                        title='今網科技  --台灣首席社區網路服務公司',
+                        thumbnail_image_url='https://upload.cc/i1/2022/03/11/V072GP.jpg',
+                        title='保險知識 -- Q&A問答機器人',
                         text='Owen Zhang',
                         actions=[
-                            MessageTemplateAction(
-                                label='☞ 前端工程請益',
-                                text='賣飲料'
-                            ),
                             URITemplateAction(
-                                label='☞ 台中工作請益',
-                                uri='http://www.ntu.edu.tw'
-                            ),
-                            PostbackTemplateAction(
-                                label='☞ 街健、水族請益',
-                                data='action=sell&item=飲料'
+                                label='☞ 一份保險，一份情..',
+                                uri='https://insthu.azurewebsites.net/'
                             ),
                         ]
                     ),
-                    CarouselColumn(
-                        thumbnail_image_url='https://upload.cc/i1/2021/05/11/e8JOP7.jpg',
-                        title='蝦皮購物  --世界知名電商',
-                        text='Sister Zhao',
-                        actions=[
-                            MessageTemplateAction(
-                                label='☞ 測試工程師請益',
-                                text='賣飲料'
-                            ),
-                            URITemplateAction(
-                                label='☞ 面試流程請益',
-                                uri='http://www.ntu.edu.tw'
-                            ),
-                            PostbackTemplateAction(
-                                label='☞ 中山資管所請益',
-                                data='action=sell&item=飲料'
-                            ),
-                        ]
-                    ),
-                    CarouselColumn(
-                        thumbnail_image_url='https://upload.cc/i1/2021/05/11/X8GJIR.jpg',
-                        title='家裡蹲  --亞洲第一不肖子',
-                        text='Nibble Old Lee',
-                        actions=[
-                            MessageTemplateAction(
-                                label='☞ 合理化啃老請益',
-                                text='賣飲料'
-                            ),
-                            URITemplateAction(
-                                label='☞ 保險業務請益',
-                                uri='http://www.ntu.edu.tw'
-                            ),
-                            PostbackTemplateAction(
-                                label='☞ 系友現況分享交流投稿++',
-                                data='action=sell&item=飲料'
-                            ),
-                        ]
-                    ),
-
-
+                    # CarouselColumn(
+                    #     thumbnail_image_url='https://upload.cc/i1/2021/05/11/e8JOP7.jpg',
+                    #     title='蝦皮購物  --世界知名電商',
+                    #     text='Sister Zhao',
+                    #     actions=[
+                    #         MessageTemplateAction(
+                    #             label='☞ 測試工程師請益',
+                    #             text='賣飲料'
+                    #         ),
+                    #         URITemplateAction(
+                    #             label='☞ 面試流程請益',
+                    #             uri='http://www.ntu.edu.tw'
+                    #         ),
+                    #         PostbackTemplateAction(
+                    #             label='☞ 中山資管所請益',
+                    #             data='action=sell&item=飲料'
+                    #         ),
+                    #     ]
+                    # ),
+                    # CarouselColumn(
+                    #     thumbnail_image_url='https://upload.cc/i1/2021/05/11/X8GJIR.jpg',
+                    #     title='家裡蹲  --亞洲第一不肖子',
+                    #     text='Nibble Old Lee',
+                    #     actions=[
+                    #         MessageTemplateAction(
+                    #             label='☞ 合理化啃老請益',
+                    #             text='賣飲料'
+                    #         ),
+                    #         URITemplateAction(
+                    #             label='☞ 保險業務請益',
+                    #             uri='http://www.ntu.edu.tw'
+                    #         ),
+                    #         PostbackTemplateAction(
+                    #             label='☞ 系友現況分享交流投稿++',
+                    #             data='action=sell&item=飲料'
+                    #         ),
+                    #     ]
+                    # ),
                 ]
             )
         )
@@ -453,10 +431,10 @@ def tks(event):  # 多項傳送
 def sendPosition(event):  # 傳送位置
     try:
         message = LocationSendMessage(
-            title='3/21 Campus Cafe 站前店',
-            address='台北市中正區館前路36號2F',
-            latitude=25.04449607163987,  # 緯度
-            longitude=121.51486865835263  # 經度
+            title='3/26 苗栗 愛在甜心',
+            address='364 苗栗縣苗栗市苗栗縣大湖鄉富興村七鄰八寮灣33-5號',
+            latitude=24.441221490905843,  # 緯度
+            longitude=120.8743075203372  # 經度
         )
         line_bot_api.reply_message(event.reply_token, message)
     except:

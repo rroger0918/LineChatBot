@@ -166,14 +166,14 @@ def thuai(event):  #圖片轉盤
                         image_url='https://upload.cc/i1/2021/05/13/gK5sLk.jpg',
                         action= URITemplateAction(
                             label='訂閱姜老師🄰🄸頻道',
-                            uri='https://www.youtube.com/channel/UCO2OeAi6QDiMECtPDMYbANw/videos'
+                            uri='https://liff.line.me/1656959733-5gyYdjQx'
                             ),
                     ),
                     ImageCarouselColumn(
                         image_url='https://upload.cc/i1/2021/05/13/pg4liH.jpg',                    
                         action= URITemplateAction(
                             label='看看心淳老師教學多棒♥',
-                            uri='http://im.thu.edu.tw/web/student/detail.php?cid=1&id=14'
+                            uri='https://liff.line.me/1656959733-PWgpqDv3'
                             ),
                     ),
                     ImageCarouselColumn(
@@ -235,9 +235,6 @@ def sendImage(event):  # 傳送圖片
 def sendMulti(event):  # 多項傳送
     try:
         message = [  # 串列
-            TextSendMessage(  # 傳送y文字
-                text="謝謝你的支持！"
-            ),
             # StickerSendMessage(  #傳送貼圖
             #     package_id='1',
             #     sticker_id='5'
@@ -489,6 +486,10 @@ def sendQuickreply(event):  # 快速選單
                     QuickReplyButton(
                         action=MessageAction(
                             label="黑狗軒免運布朗尼?", text="我想買黑狗軒免運布朗尼")
+                    ),
+                    QuickReplyButton(
+                        action=MessageAction(
+                            label="周邊網頁?", text="周邊網頁介紹")
                     ),
                 ]
             )
