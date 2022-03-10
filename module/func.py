@@ -45,32 +45,25 @@ def share(event):
             template=ImageCarouselTemplate(
                 columns=[
                     ImageCarouselColumn(
-                        image_url='https://upload.cc/i1/2021/05/13/viL3nz.jpg',
+                        image_url='https://upload.cc/i1/2022/03/11/z0n2UD.jpg',
                         action=MessageTemplateAction(
-                            label='班導的話',
-                            text='班導的話'
+                            label='AI研討會資訊&報名',
+                            uri='https://thuform20211220233251.azurewebsites.net/'
                         )
                     ),
                     ImageCarouselColumn(
-                        image_url='https://upload.cc/i1/2021/05/13/gK5sLk.jpg',
+                        image_url='https://upload.cc/i1/2022/03/11/0hTPS2.jpg',
                         action= URITemplateAction(
-                            label='訂閱姜老師🄰🄸頻道',
-                            uri='https://liff.line.me/1656959733-5gyYdjQx'
+                            label='系友知識分享交流',
+                            uri='https://sharethu.azurewebsites.net/'
                             ),
                     ),
                     ImageCarouselColumn(
-                        image_url='https://upload.cc/i1/2021/05/13/pg4liH.jpg',                    
+                        image_url='https://upload.cc/i1/2022/03/11/eQrIvZ.jpg',                    
                         action= URITemplateAction(
-                            label='看看心淳老師教學多棒♥',
-                            uri='https://liff.line.me/1656959733-PWgpqDv3'
+                            label='保險知識Q&A機器人',
+                            uri='https://insthu.azurewebsites.net/'
                             ),
-                    ),
-                    ImageCarouselColumn(
-                        image_url='https://upload.cc/i1/2021/05/13/NHpqTj.jpg',
-                        action=MessageTemplateAction(
-                            label='想加入張育仁之家',
-                            text='想加入張育仁之家'
-                        )
                     ),
                 ]
             )
