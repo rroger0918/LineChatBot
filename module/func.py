@@ -40,7 +40,7 @@ def sendFlex(event):
 #學長姐分享
 def share(event):
     try:
-         message = TemplateSendMessage(
+        message = TemplateSendMessage(
             alt_text='正偉帥帥',
             template=ImageCarouselTemplate(
                 columns=[
@@ -74,7 +74,6 @@ def share(event):
                     ),
                 ]
             )
-        )
         )
         line_bot_api.reply_message(event.reply_token,message)
     except:
