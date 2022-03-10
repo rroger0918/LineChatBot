@@ -144,14 +144,14 @@ def thuai(event):  #圖片轉盤
                         image_url='https://upload.cc/i1/2021/05/13/gK5sLk.jpg',
                         action= URITemplateAction(
                             label='訂閱姜老師🄰🄸頻道',
-                            uri='https://www.youtube.com/channel/UCO2OeAi6QDiMECtPDMYbANw/videos'
+                            uri='https://liff.line.me/1656959733-5gyYdjQx'
                             ),
                     ),
                     ImageCarouselColumn(
                         image_url='https://upload.cc/i1/2021/05/13/pg4liH.jpg',                    
                         action= URITemplateAction(
                             label='看看心淳老師教學多棒♥',
-                            uri='http://im.thu.edu.tw/web/student/detail.php?cid=1&id=14'
+                            uri='https://liff.line.me/1656959733-PWgpqDv3'
                             ),
                     ),
                     ImageCarouselColumn(
