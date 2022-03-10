@@ -411,10 +411,10 @@ def sendQuickreply(event):  # 快速選單
                         action=MessageAction(
                             label="黑狗軒免運布朗尼?", text="我想買黑狗軒免運布朗尼")
                     ),
-                    QuickReplyButton(
-                        action=MessageAction(
-                            label="周邊網頁?", text="周邊網頁介紹")
-                    ),
+                    # QuickReplyButton(
+                    #     action=MessageAction(
+                    #         label="周邊網頁?", text="周邊網頁介紹")
+                    # ),
                 ]
             )
         )
@@ -450,10 +450,10 @@ def error(event):  # 傳送錯誤文字
                         action=MessageAction(
                             label="黑狗軒免運布朗尼?", text="我想買黑狗軒免運布朗尼")
                     ),
-                    QuickReplyButton(
-                        action=MessageAction(
-                            label="周邊網頁?", text="周邊網頁介紹")
-                    ),
+                    # QuickReplyButton(
+                    #     action=MessageAction(
+                    #         label="周邊網頁?", text="周邊網頁介紹")
+                    # ),
                 ]
             )
         )
