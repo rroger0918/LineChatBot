@@ -42,83 +42,29 @@ def share(event):
     try:
         message = TemplateSendMessage(
             alt_text='周邊網頁介紹',
-            template=CarouselTemplate(
+            template=ImageCarouselTemplate(
                 columns=[
-                    CarouselColumn(
-                        thumbnail_image_url='https://upload.cc/i1/2022/03/11/0hTPS2.jpg',
-                        title='系友交流 -- 知識管理',
-                        text='Adam Wang',
-                        actions=[
-                            URITemplateAction(
-                                label='☞ Share knowledge with us right now !',
-                                uri='https://sharethu.azurewebsites.net/'
-                            ),
-                            # PostbackTemplateAction(
-                            #     label='☞ 拳擊交流',
-                            #     data='action=sell&item=安安'
-                            # ),
-                        ]
+                    ImageCarouselColumn(
+                        image_url='https://upload.cc/i1/2022/03/11/z0n2UD.jpg',
+                        action=MessageTemplateAction(
+                            label='AI研討會資訊&報名',
+                            uri='https://thuform20211220233251.azurewebsites.net/'
+                        )
                     ),
-                    CarouselColumn(
-                        thumbnail_image_url='https://upload.cc/i1/2022/03/11/EOJFym.jpg',
-                        title='AI研討會 -- 活動資訊 & 報名表',
-                        text='Wenna Zhang',
-                        actions=[
-                            URITemplateAction(
-                                label='☞ AI東海 - 贏戰未來 !',
-                                uri='https://thuform20211220233251.azurewebsites.net/'
+                    ImageCarouselColumn(
+                        image_url='https://upload.cc/i1/2022/03/11/0hTPS2.jpg',
+                        action= URITemplateAction(
+                            label='系友知識分享交流',
+                            uri='https://sharethu.azurewebsites.net/'
                             ),
-                        ]
                     ),
-                    CarouselColumn(
-                        thumbnail_image_url='https://upload.cc/i1/2022/03/11/V072GP.jpg',
-                        title='保險知識 -- Q&A問答機器人',
-                        text='Owen Zhang',
-                        actions=[
-                            URITemplateAction(
-                                label='☞ 一份保險，一份情..',
-                                uri='https://insthu.azurewebsites.net/'
+                    ImageCarouselColumn(
+                        image_url='https://upload.cc/i1/2022/03/11/eQrIvZ.jpg',                    
+                        action= URITemplateAction(
+                            label='保險知識Q&A機器人',
+                            uri='https://insthu.azurewebsites.net/'
                             ),
-                        ]
                     ),
-                    # CarouselColumn(
-                    #     thumbnail_image_url='https://upload.cc/i1/2021/05/11/e8JOP7.jpg',
-                    #     title='蝦皮購物  --世界知名電商',
-                    #     text='Sister Zhao',
-                    #     actions=[
-                    #         MessageTemplateAction(
-                    #             label='☞ 測試工程師請益',
-                    #             text='賣飲料'
-                    #         ),
-                    #         URITemplateAction(
-                    #             label='☞ 面試流程請益',
-                    #             uri='http://www.ntu.edu.tw'
-                    #         ),
-                    #         PostbackTemplateAction(
-                    #             label='☞ 中山資管所請益',
-                    #             data='action=sell&item=飲料'
-                    #         ),
-                    #     ]
-                    # ),
-                    # CarouselColumn(
-                    #     thumbnail_image_url='https://upload.cc/i1/2021/05/11/X8GJIR.jpg',
-                    #     title='家裡蹲  --亞洲第一不肖子',
-                    #     text='Nibble Old Lee',
-                    #     actions=[
-                    #         MessageTemplateAction(
-                    #             label='☞ 合理化啃老請益',
-                    #             text='賣飲料'
-                    #         ),
-                    #         URITemplateAction(
-                    #             label='☞ 保險業務請益',
-                    #             uri='http://www.ntu.edu.tw'
-                    #         ),
-                    #         PostbackTemplateAction(
-                    #             label='☞ 系友現況分享交流投稿++',
-                    #             data='action=sell&item=飲料'
-                    #         ),
-                    #     ]
-                    # ),
                 ]
             )
         )
