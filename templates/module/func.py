@@ -13,7 +13,7 @@ def hi(event):
         message = [  # 串列
             
             TextSendMessage(  # 傳送y文字
-                text="Hi，你好啊"
+                text="Hi，安安你好啊"
             ),
         ]
         line_bot_api.reply_message(event.reply_token, message)
