@@ -65,7 +65,7 @@ def share(event):
                         text='Wenna Zhang',
                         actions=[
                             URITemplateAction(
-                                label='☞ AI東海，贏戰未來 !',
+                                label='☞ AI東海 - 贏戰未來 !',
                                 uri='https://thuform20211220233251.azurewebsites.net/'
                             ),
                         ]
