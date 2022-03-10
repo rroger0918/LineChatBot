@@ -213,9 +213,6 @@ def sendImage(event):  # 傳送圖片
 def sendMulti(event):  # 多項傳送
     try:
         message = [  # 串列
-            TextSendMessage(  # 傳送y文字
-                text="謝謝你的支持！"
-            ),
             # StickerSendMessage(  #傳送貼圖
             #     package_id='1',
             #     sticker_id='5'
@@ -468,6 +465,10 @@ def sendQuickreply(event):  # 快速選單
                         action=MessageAction(
                             label="黑狗軒免運布朗尼?", text="我想買黑狗軒免運布朗尼")
                     ),
+                    QuickReplyButton(
+                        action=MessageAction(
+                            label="周邊網頁?", text="周邊網頁介紹")
+                    ),
                 ]
             )
         )
@@ -502,6 +503,10 @@ def error(event):  # 傳送錯誤文字
                     QuickReplyButton(
                         action=MessageAction(
                             label="黑狗軒免運布朗尼?", text="我想買黑狗軒免運布朗尼")
+                    ),
+                    QuickReplyButton(
+                        action=MessageAction(
+                            label="周邊網頁?", text="周邊網頁介紹")
                     ),
                 ]
             )
