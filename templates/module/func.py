@@ -41,7 +41,7 @@ def sendFlex(event):
 def share(event):
     try:
         message = TemplateSendMessage(
-            alt_text='相關網頁 !',
+            alt_text='周邊網頁介紹',
             template=CarouselTemplate(
                 columns=[
                     CarouselColumn(
