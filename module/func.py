@@ -26,8 +26,9 @@ def sendFlex(event):
     try:
         message = [  # 串列
             ImageSendMessage(  # 傳送圖片
-                original_content_url="https://upload.cc/i1/2021/06/29/eF4fvj.jpg",
-                preview_image_url="https://upload.cc/i1/2021/06/29/eF4fvj.jpg"
+            ##https://upload.cc/i1/2021/06/29/eF4fvj.jpg
+                original_content_url="https://upload.cc/i1/2021/06/27/Xo3sVY.jpg",
+                preview_image_url="https://upload.cc/i1/2021/06/27/Xo3sVY.jpg"
             ),
             TextSendMessage(  # 傳送y文字
                 text="\U0001F409東海龍王昂哥，是現任高雄苗栗屏東花蓮及新北三重蘆洲地方大老、企業公安管理顧問師、海軍陸戰隊培訓師、職業演說家、並經營一間AI砂石場，每年吸引超過20億的資金投資。\n\n☠真槍實彈實戰經驗23年，商業經營15年。從陌生派系開發一路經營到社會上流，專精於地方營運、公安設計、組織經營與管理。\n\n☢服務過的客戶包含伊拉克、美國蛙人部隊、俄羅斯北極熊生擒小隊、亞馬遜食人魚活烤三吃小隊、越南科摩多龍生擒小隊、中國新冠肺炎生擒小隊、…等百大特殊單位。\n\n\U0001F479昂哥公司協助各級組織創建永續發展的地方經營策略，致力於訓練、建立、指導高績效團隊。他以其專業領域「戰鬥哲學」為基礎，設計出獨特的指導手法，以最簡單直白的方式，協助各行各業中埋伏的內賊及地方樁腳大幅提升資產，廣受好評。"
@@ -154,6 +155,28 @@ def sendImage(event):  # 傳送圖片
         line_bot_api.reply_message(
             event.reply_token, TextSendMessage(text='發生錯誤！'))
 
+#開啟相簿
+def photo(event):  # 多項傳送
+    try:
+        message = [  # 串列
+            # StickerSendMessage(  #傳送貼圖
+            #     package_id='1',
+            #     sticker_id='5'
+            # ),
+            ImageSendMessage(  # 傳送圖片
+                original_content_url="https://images.unsplash.com/photo-1528569937393-ee892b976859?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+                preview_image_url="https://images.unsplash.com/photo-1528569937393-ee892b976859?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+            ),
+            TextSendMessage(  # 傳送y文字
+                text="https://photos.app.goo.gl/36HWVwogvUeEBWsB6"
+            )
+
+        ]
+        line_bot_api.reply_message(event.reply_token, message)
+    except:
+        line_bot_api.reply_message(
+            event.reply_token, TextSendMessage(text='發生錯誤！'))
+
 
 #昂哥貼圖
 def sendMulti(event):  # 多項傳送
@@ -265,7 +288,7 @@ def meatgood(event):
                 contents=[
                     TextComponent(text='蒜味肉紙，茗爺真心推薦 !',
                                   color='#888888', size='sm', align='center'),
-                ]
+                ]｛
             ),
         )
         message = FlexSendMessage(alt_text="蒜味肉紙，茗爺真心推薦", contents=bubble)
@@ -435,7 +458,7 @@ def error(event):  # 傳送錯誤文字
                     ),
                     QuickReplyButton(
                         action=MessageAction(
-                            label="昂哥尊容?", text="可以讓我看看昂哥有多屌嗎")
+                            label="回憶相簿?", text="回憶相簿")
                     ),
                     QuickReplyButton(
                         action=MessageAction(label="同學會資訊?", text="同學會辦在哪")
