@@ -39,39 +39,39 @@ def sendFlex(event):
         line_bot_api.reply_message(
             event.reply_token, TextSendMessage(text='發生錯誤！'))
 #學長姐分享
-# def share(event):
-#     try:
-#         message = TemplateSendMessage(
-#             alt_text='周邊網頁介紹',
-#             template=ImageCarouselTemplate(
-#                 columns=[
-#                     ImageCarouselColumn(
-#                         image_url='https://upload.cc/i1/2022/03/11/z0n2UD.jpg',
-#                         action=MessageTemplateAction(
-#                             label='AI研討會資訊&報名',
-#                             uri='https://thuform20211220233251.azurewebsites.net/'
-#                         )
-#                     ),
-#                     ImageCarouselColumn(
-#                         image_url='https://upload.cc/i1/2022/03/11/0hTPS2.jpg',
-#                         action= URITemplateAction(
-#                             label='系友知識分享交流',
-#                             uri='https://sharethu.azurewebsites.net/'
-#                             ),
-#                     ),
-#                     ImageCarouselColumn(
-#                         image_url='https://upload.cc/i1/2022/03/11/eQrIvZ.jpg',                    
-#                         action= URITemplateAction(
-#                             label='保險知識Q&A機器人',
-#                             uri='https://insthu.azurewebsites.net/'
-#                             ),
-#                     ),
-#                 ]
-#             )
-#         )
-#         line_bot_api.reply_message(event.reply_token,message)
-#     except:
-#         line_bot_api.reply_message(event.reply_token,TextSendMessage(text='發生錯誤！'))
+def share(event):
+    try:
+        message = TemplateSendMessage(
+            alt_text='周邊網頁介紹',
+            template=ImageCarouselTemplate(
+                columns=[
+                    ImageCarouselColumn(
+                        image_url='https://upload.cc/i1/2022/03/11/z0n2UD.jpg',
+                        action=MessageTemplateAction(
+                            label='AI研討會資訊&報名',
+                            uri='https://thuform20211220233251.azurewebsites.net/'
+                        )
+                    ),
+                    ImageCarouselColumn(
+                        image_url='https://upload.cc/i1/2022/03/11/0hTPS2.jpg',
+                        action= URITemplateAction(
+                            label='系友知識分享交流',
+                            uri='https://sharethu.azurewebsites.net/'
+                            ),
+                    ),
+                    ImageCarouselColumn(
+                        image_url='https://upload.cc/i1/2022/03/11/eQrIvZ.jpg',                    
+                        action= URITemplateAction(
+                            label='保險知識Q&A機器人',
+                            uri='https://insthu.azurewebsites.net/'
+                            ),
+                    ),
+                ]
+            )
+        )
+        line_bot_api.reply_message(event.reply_token,message)
+    except:
+        line_bot_api.reply_message(event.reply_token,TextSendMessage(text='發生錯誤！'))
 
 #正偉圖文
 def thuai(event):  #圖片轉盤
@@ -430,7 +430,7 @@ def sendQuickreply(event):  # 快速選單
                     ),
                     QuickReplyButton(
                         action=MessageAction(
-                            label="照片上傳相簿?", text="開啟回憶相簿")
+                            label="照片上傳相簿?", text="回憶相簿")
                     ),
                     
                     # QuickReplyButton(

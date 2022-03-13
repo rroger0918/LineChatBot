@@ -70,13 +70,13 @@ def callback(request):
                     elif mtext == '想加入張育仁之家':
                         func.yuhome(event)
 
-                    # elif mtext == '周邊網頁介紹':
-                    #     func.share(event)
+                    elif mtext == '周邊網頁介紹':
+                        func.share(event)
     
                     elif mtext == '我們最愛的師長':
                         func.thuai(event)
 
-                    elif mtext == '開啟相簿':
+                    elif mtext == '回憶相簿':
                         func.photo(event)
 
                     elif mtext == '更多服務+':
