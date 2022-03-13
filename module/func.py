@@ -42,42 +42,43 @@ def sendFlex(event):
     except:
         line_bot_api.reply_message(
             event.reply_token, TextSendMessage(text='發生錯誤！'))
+# 學長姐分享
 
-# # 學長姐分享
-# def share(event):
-#     try:
-#         message = TemplateSendMessage(
-#             alt_text='周邊網頁介紹',
-#             template=ImageCarouselTemplate(
-#                 columns=[
-#                     ImageCarouselColumn(
-#                         image_url='https://upload.cc/i1/2022/03/11/z0n2UD.jpg',
-#                         action=MessageTemplateAction(
-#                             label='AI研討會資訊&報名',
-#                             uri='https://thuform20211220233251.azurewebsites.net/'
-#                         )
-#                     ),
-#                     ImageCarouselColumn(
-#                         image_url='https://upload.cc/i1/2022/03/11/0hTPS2.jpg',
-#                         action=URITemplateAction(
-#                             label='系友知識分享交流',
-#                             uri='https://sharethu.azurewebsites.net/'
-#                         ),
-#                     ),
-#                     ImageCarouselColumn(
-#                         image_url='https://upload.cc/i1/2022/03/11/eQrIvZ.jpg',
-#                         action=URITemplateAction(
-#                             label='保險知識Q&A機器人',
-#                             uri='https://insthu.azurewebsites.net/'
-#                         ),
-#                     ),
-#                 ]
-#             )
-#         )
-#         line_bot_api.reply_message(event.reply_token, message)
-#     except:
-#         line_bot_api.reply_message(
-#             event.reply_token, TextSendMessage(text='發生錯誤！'))
+
+def share(event):
+    try:
+        message = TemplateSendMessage(
+            alt_text='周邊網頁介紹',
+            template=ImageCarouselTemplate(
+                columns=[
+                    ImageCarouselColumn(
+                        image_url='https://upload.cc/i1/2022/03/11/z0n2UD.jpg',
+                        action=MessageTemplateAction(
+                            label='AI研討會資訊&報名',
+                            uri='https://thuform20211220233251.azurewebsites.net/'
+                        )
+                    ),
+                    ImageCarouselColumn(
+                        image_url='https://upload.cc/i1/2022/03/11/0hTPS2.jpg',
+                        action=URITemplateAction(
+                            label='系友知識分享交流',
+                            uri='https://sharethu.azurewebsites.net/'
+                        ),
+                    ),
+                    ImageCarouselColumn(
+                        image_url='https://upload.cc/i1/2022/03/11/eQrIvZ.jpg',
+                        action=URITemplateAction(
+                            label='保險知識Q&A機器人',
+                            uri='https://insthu.azurewebsites.net/'
+                        ),
+                    ),
+                ]
+            )
+        )
+        line_bot_api.reply_message(event.reply_token, message)
+    except:
+        line_bot_api.reply_message(
+            event.reply_token, TextSendMessage(text='發生錯誤！'))
 
 # 正偉圖文
 
@@ -175,55 +176,18 @@ def sendImage(event):  # 傳送圖片
 
 def photo(event):  # 多項傳送
     try:
-        message = TemplateSendMessage(
-            alt_text='回憶相簿',
-            template=ImageCarouselTemplate(
-                columns=[
-                    ImageCarouselColumn(
-                        image_url='https://upload.cc/i1/2021/05/13/viL3nz.jpg',
-                        action=MessageTemplateAction(
-                            label='2022-03 苗栗郵記',
-                            uri='https://liff.line.me/1656959733-5gyYdjQx'
-                        )
-                    ),
-                    ImageCarouselColumn(
-                        image_url='https://upload.cc/i1/2022/03/13/UsbE1X.jpg',
-                        action=URITemplateAction(
-                            label='2021-03 台北Campus Cafe',
-                            uri='https://photos.app.goo.gl/z7EmdzFrsaKdjTBw9'
-                        ),
-                    ),
-                    ImageCarouselColumn(
-                        image_url='https://photos.app.goo.gl/CXezbzFwrr4WtCYz5',
-                        action=URITemplateAction(
-                            label='2020-08 高雄變天 ( 汕頭火鍋 )',
-                            uri='https://photos.app.goo.gl/CXezbzFwrr4WtCYz5'
-                        ),
-                    ),
-                    ImageCarouselColumn(
-                        image_url='https://upload.cc/i1/2022/03/13/QpGE5H.jpg',
-                        action=MessageTemplateAction(
-                            label='2020-01 台中母校遊',
-                            uri='https://photos.app.goo.gl/Gs8nsBShRa7YFxRM7'
-                        )
-                    ),
-                    # ImageCarouselColumn(
-                    #     image_url='https://upload.cc/i1/2022/03/13/6qGkYm.jpg',
-                    #     action=MessageTemplateAction(
-                    #         label='2019-07 台北市立動物園',
-                    #         uri='https://photos.app.goo.gl/UqyEMTciwQ315YvSA'
-                    #     )
-                    # ),
-                    # ImageCarouselColumn(
-                    #     image_url='https://upload.cc/i1/2022/03/13/5Ez706.jpg',
-                    #     action=MessageTemplateAction(
-                    #         label='2019-01 台北金色三麥',
-                    #         uri='https://photos.app.goo.gl/8iDqYoGUWkpDqzMQ8'
-                    #     )
-                    # ),
-                ]
-            )
-        )
+        message = [  # 串列
+            # StickerSendMessage(  #傳送貼圖
+            #     package_id='1',
+            #     sticker_id='5'
+            # ),
+            TextSendMessage(  # 傳送y文字
+                text="苗栗郵記 - 相片上傳區"
+            ),
+            TextSendMessage(  # 傳送y文字
+                text="https://photos.app.goo.gl/36HWVwogvUeEBWsB6"
+            ),
+        ]
         line_bot_api.reply_message(event.reply_token, message)
     except:
         line_bot_api.reply_message(
@@ -493,10 +457,10 @@ def sendQuickreply(event):  # 快速選單
                         action=MessageAction(
                             label="黑狗軒免運布朗尼?", text="我想買黑狗軒免運布朗尼")
                     ),
-                    # QuickReplyButton(
-                    #     action=MessageAction(
-                    #         label="周邊網頁?", text="周邊網頁介紹")
-                    # ),
+                    QuickReplyButton(
+                        action=MessageAction(
+                            label="周邊網頁?", text="周邊網頁介紹")
+                    ),
                 ]
             )
         )
