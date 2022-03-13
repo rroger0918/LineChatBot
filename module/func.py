@@ -439,7 +439,7 @@ def sendQuickreply(event):  # 快速選單
                     ),
                     QuickReplyButton(
                         action=MessageAction(
-                            label="照片上傳相簿?", url="https://photos.app.goo.gl/36HWVwogvUeEBWsB6")
+                            label="上傳相簿?", text="回憶相簿")
                     ),
                     QuickReplyButton(
                         action=MessageAction(label="昂哥經歷與偉業?", text="誰是昂哥")
