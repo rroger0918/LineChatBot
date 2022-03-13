@@ -182,7 +182,7 @@ def photo(event):  # 多項傳送
             #     sticker_id='5'
             # ),
             TextSendMessage(  # 傳送y文字
-                text="https://liff.line.me/1656959733-pPXj9wBE"
+                text="https://photos.app.goo.gl/36HWVwogvUeEBWsB6"
             )
         ]
         line_bot_api.reply_message(event.reply_token, message)
@@ -439,7 +439,7 @@ def sendQuickreply(event):  # 快速選單
                     ),
                     QuickReplyButton(
                         action=MessageAction(
-                            label="照片上傳相簿?", text="回憶相簿")
+                            label="照片上傳相簿?", url="https://photos.app.goo.gl/36HWVwogvUeEBWsB6")
                     ),
                     QuickReplyButton(
                         action=MessageAction(label="昂哥經歷與偉業?", text="誰是昂哥")
