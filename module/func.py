@@ -207,20 +207,20 @@ def photo(event):  # 多項傳送
                             uri='https://photos.app.goo.gl/Gs8nsBShRa7YFxRM7'
                         )
                     ),
-                    ImageCarouselColumn(
-                        image_url='https://upload.cc/i1/2022/03/13/6qGkYm.jpg',
-                        action=MessageTemplateAction(
-                            label='2019-07 台北市立動物園',
-                            uri='https://photos.app.goo.gl/UqyEMTciwQ315YvSA'
-                        )
-                    ),
-                    ImageCarouselColumn(
-                        image_url='https://upload.cc/i1/2022/03/13/5Ez706.jpg',
-                        action=MessageTemplateAction(
-                            label='2019-01 台北金色三麥',
-                            uri='https://photos.app.goo.gl/8iDqYoGUWkpDqzMQ8'
-                        )
-                    ),
+                    # ImageCarouselColumn(
+                    #     image_url='https://upload.cc/i1/2022/03/13/6qGkYm.jpg',
+                    #     action=MessageTemplateAction(
+                    #         label='2019-07 台北市立動物園',
+                    #         uri='https://photos.app.goo.gl/UqyEMTciwQ315YvSA'
+                    #     )
+                    # ),
+                    # ImageCarouselColumn(
+                    #     image_url='https://upload.cc/i1/2022/03/13/5Ez706.jpg',
+                    #     action=MessageTemplateAction(
+                    #         label='2019-01 台北金色三麥',
+                    #         uri='https://photos.app.goo.gl/8iDqYoGUWkpDqzMQ8'
+                    #     )
+                    # ),
                 ]
             )
         )
