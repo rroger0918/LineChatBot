@@ -175,17 +175,55 @@ def sendImage(event):  # 傳送圖片
 
 def photo(event):  # 多項傳送
     try:
-        message = [  # 串列
-            # StickerSendMessage(  #傳送貼圖
-            #     package_id='1',
-            #     sticker_id='5'
-            # ),
-
-            TextSendMessage(  # 傳送y文字
-                text="苗栗郵記"
-                text="https://photos.app.goo.gl/36HWVwogvUeEBWsB6"
+        message = TemplateSendMessage(
+            alt_text='回憶相簿',
+            template=ImageCarouselTemplate(
+                columns=[
+                    ImageCarouselColumn(
+                        image_url='https://upload.cc/i1/2021/05/13/viL3nz.jpg',
+                        action=MessageTemplateAction(
+                            label='2022-03 苗栗郵記',
+                            uri='https://liff.line.me/1656959733-5gyYdjQx'
+                        )
+                    ),
+                    ImageCarouselColumn(
+                        image_url='https://upload.cc/i1/2022/03/13/UsbE1X.jpg',
+                        action=URITemplateAction(
+                            label='2021-03 台北Campus Cafe',
+                            uri='https://photos.app.goo.gl/z7EmdzFrsaKdjTBw9'
+                        ),
+                    ),
+                    ImageCarouselColumn(
+                        image_url='https://photos.app.goo.gl/CXezbzFwrr4WtCYz5',
+                        action=URITemplateAction(
+                            label='2020-08 高雄變天 ( 汕頭火鍋 )',
+                            uri='https://photos.app.goo.gl/CXezbzFwrr4WtCYz5'
+                        ),
+                    ),
+                    ImageCarouselColumn(
+                        image_url='https://upload.cc/i1/2022/03/13/QpGE5H.jpg',
+                        action=MessageTemplateAction(
+                            label='2020-01 台中母校遊',
+                            uri='https://photos.app.goo.gl/Gs8nsBShRa7YFxRM7'
+                        )
+                    ),
+                    ImageCarouselColumn(
+                        image_url='https://upload.cc/i1/2022/03/13/6qGkYm.jpg',
+                        action=MessageTemplateAction(
+                            label='2019-07 台北市立動物園',
+                            uri='https://photos.app.goo.gl/UqyEMTciwQ315YvSA'
+                        )
+                    ),
+                    ImageCarouselColumn(
+                        image_url='https://upload.cc/i1/2022/03/13/5Ez706.jpg',
+                        action=MessageTemplateAction(
+                            label='2019-01 台北金色三麥',
+                            uri='https://photos.app.goo.gl/8iDqYoGUWkpDqzMQ8'
+                        )
+                    ),
+                ]
             )
-        ]
+        )
         line_bot_api.reply_message(event.reply_token, message)
     except:
         line_bot_api.reply_message(
