@@ -180,7 +180,9 @@ def photo(event):  # 多項傳送
             #     package_id='1',
             #     sticker_id='5'
             # ),
+
             TextSendMessage(  # 傳送y文字
+                text="苗栗郵記"
                 text="https://photos.app.goo.gl/36HWVwogvUeEBWsB6"
             )
         ]
