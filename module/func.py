@@ -163,14 +163,9 @@ def photo(event):  # 多項傳送
             #     package_id='1',
             #     sticker_id='5'
             # ),
-            ImageSendMessage(  # 傳送圖片
-                original_content_url="https://images.unsplash.com/photo-1528569937393-ee892b976859?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
-                preview_image_url="https://images.unsplash.com/photo-1528569937393-ee892b976859?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
-            ),
             TextSendMessage(  # 傳送y文字
-                text="https://photos.app.goo.gl/36HWVwogvUeEBWsB6"
+                text="https://liff.line.me/1656959733-pPXj9wBE"
             )
-
         ]
         line_bot_api.reply_message(event.reply_token, message)
     except:
@@ -193,7 +188,6 @@ def sendMulti(event):  # 多項傳送
             TextSendMessage(  # 傳送y文字
                 text="https://line.me/S/sticker/14627819"
             )
-
         ]
         line_bot_api.reply_message(event.reply_token, message)
     except:
@@ -417,10 +411,10 @@ def sendQuickreply(event):  # 快速選單
                     QuickReplyButton(
                         action=MessageAction(label="昂哥經歷與偉業?", text="誰是昂哥")
                     ),
-                    QuickReplyButton(
-                        action=MessageAction(
-                            label="昂哥尊容?", text="可以讓我看看昂哥有多屌嗎")
-                    ),
+                    # QuickReplyButton(
+                    #     action=MessageAction(
+                    #         label="昂哥尊容?", text="可以讓我看看昂哥有多屌嗎")
+                    # ),
                     QuickReplyButton(
                         action=MessageAction(label="同學會資訊?", text="同學會辦在哪")
                     ),
@@ -436,7 +430,7 @@ def sendQuickreply(event):  # 快速選單
                     ),
                     QuickReplyButton(
                         action=MessageAction(
-                            label="回憶相簿?", text="開啟相簿")
+                            label="照片上傳相簿?", text="開啟回憶相簿")
                     ),
                     
                     # QuickReplyButton(
