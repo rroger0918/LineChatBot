@@ -6,12 +6,14 @@ from linebot.models import TextSendMessage, TemplateSendMessage, ConfirmTemplate
 
 line_bot_api = LineBotApi(settings.LINE_CHANNEL_ACCESS_TOKEN)
 
-#你好
+# 你好
+
+
 def hi(event):
-    
+
     try:
         message = [  # 串列
-            
+
             TextSendMessage(  # 傳送y文字
                 text="Hi，你好啊"
             ),
@@ -21,12 +23,14 @@ def hi(event):
         line_bot_api.reply_message(
             event.reply_token, TextSendMessage(text='發生錯誤！'))
 # 誰是昂哥
+
+
 def sendFlex(event):
-    
+
     try:
         message = [  # 串列
             ImageSendMessage(  # 傳送圖片
-            ##https://upload.cc/i1/2021/06/29/eF4fvj.jpg
+                # https://upload.cc/i1/2021/06/29/eF4fvj.jpg
                 original_content_url="https://upload.cc/i1/2021/06/27/Xo3sVY.jpg",
                 preview_image_url="https://upload.cc/i1/2021/06/27/Xo3sVY.jpg"
             ),
@@ -38,7 +42,9 @@ def sendFlex(event):
     except:
         line_bot_api.reply_message(
             event.reply_token, TextSendMessage(text='發生錯誤！'))
-#學長姐分享
+# 學長姐分享
+
+
 def share(event):
     try:
         message = TemplateSendMessage(
@@ -54,27 +60,30 @@ def share(event):
                     ),
                     ImageCarouselColumn(
                         image_url='https://upload.cc/i1/2022/03/11/0hTPS2.jpg',
-                        action= URITemplateAction(
+                        action=URITemplateAction(
                             label='系友知識分享交流',
                             uri='https://sharethu.azurewebsites.net/'
-                            ),
+                        ),
                     ),
                     ImageCarouselColumn(
-                        image_url='https://upload.cc/i1/2022/03/11/eQrIvZ.jpg',                    
-                        action= URITemplateAction(
+                        image_url='https://upload.cc/i1/2022/03/11/eQrIvZ.jpg',
+                        action=URITemplateAction(
                             label='保險知識Q&A機器人',
                             uri='https://insthu.azurewebsites.net/'
-                            ),
+                        ),
                     ),
                 ]
             )
         )
-        line_bot_api.reply_message(event.reply_token,message)
+        line_bot_api.reply_message(event.reply_token, message)
     except:
-        line_bot_api.reply_message(event.reply_token,TextSendMessage(text='發生錯誤！'))
+        line_bot_api.reply_message(
+            event.reply_token, TextSendMessage(text='發生錯誤！'))
 
-#正偉圖文
-def thuai(event):  #圖片轉盤
+# 正偉圖文
+
+
+def thuai(event):  # 圖片轉盤
     try:
         message = TemplateSendMessage(
             alt_text='正偉帥帥',
@@ -89,17 +98,17 @@ def thuai(event):  #圖片轉盤
                     ),
                     ImageCarouselColumn(
                         image_url='https://upload.cc/i1/2021/05/13/gK5sLk.jpg',
-                        action= URITemplateAction(
+                        action=URITemplateAction(
                             label='訂閱姜老師🄰🄸頻道',
                             uri='https://liff.line.me/1656959733-5gyYdjQx'
-                            ),
+                        ),
                     ),
                     ImageCarouselColumn(
-                        image_url='https://upload.cc/i1/2021/05/13/pg4liH.jpg',                    
-                        action= URITemplateAction(
+                        image_url='https://upload.cc/i1/2021/05/13/pg4liH.jpg',
+                        action=URITemplateAction(
                             label='看看心淳老師教學多棒♥',
                             uri='https://liff.line.me/1656959733-PWgpqDv3'
-                            ),
+                        ),
                     ),
                     ImageCarouselColumn(
                         image_url='https://upload.cc/i1/2021/05/13/NHpqTj.jpg',
@@ -111,11 +120,14 @@ def thuai(event):  #圖片轉盤
                 ]
             )
         )
-        line_bot_api.reply_message(event.reply_token,message)
+        line_bot_api.reply_message(event.reply_token, message)
     except:
-        line_bot_api.reply_message(event.reply_token,TextSendMessage(text='發生錯誤！'))
+        line_bot_api.reply_message(
+            event.reply_token, TextSendMessage(text='發生錯誤！'))
 
-#班導的話
+# 班導的話
+
+
 def teachertalk(event):  # 多項傳送
     try:
         message = [  # 串列
@@ -128,12 +140,14 @@ def teachertalk(event):  # 多項傳送
         line_bot_api.reply_message(
             event.reply_token, TextSendMessage(text='發生錯誤！'))
 
-#張育仁之家
+# 張育仁之家
+
+
 def yuhome(event):
-    
+
     try:
         message = [  # 串列
-            
+
             TextSendMessage(  # 傳送y文字
                 text="自己去問系辦啦廢物"
             ),
@@ -143,7 +157,9 @@ def yuhome(event):
         line_bot_api.reply_message(
             event.reply_token, TextSendMessage(text='發生錯誤！'))
 
-#昂哥尊容
+# 昂哥尊容
+
+
 def sendImage(event):  # 傳送圖片
     try:
         message = ImageSendMessage(
@@ -155,7 +171,9 @@ def sendImage(event):  # 傳送圖片
         line_bot_api.reply_message(
             event.reply_token, TextSendMessage(text='發生錯誤！'))
 
-#開啟相簿
+# 開啟相簿
+
+
 def photo(event):  # 多項傳送
     try:
         message = [  # 串列
@@ -173,7 +191,7 @@ def photo(event):  # 多項傳送
             event.reply_token, TextSendMessage(text='發生錯誤！'))
 
 
-#昂哥貼圖
+# 昂哥貼圖
 def sendMulti(event):  # 多項傳送
     try:
         message = [  # 串列
@@ -195,6 +213,8 @@ def sendMulti(event):  # 多項傳送
             event.reply_token, TextSendMessage(text='發生錯誤！'))
 
 # 茗翔肉乾
+
+
 def meatgood(event):
     try:
         bubble = BubbleContainer(
@@ -265,7 +285,7 @@ def meatgood(event):
                                 style='primary',
                                 height='sm',
                                 action=URIAction(
-                                     label='Line官方帳號', uri='https://liff.line.me/1645278921-kWRPP32q?accountId=rcf5071r&openerPlatform=native&openerKey=qrcode'),
+                                    label='Line官方帳號', uri='https://liff.line.me/1645278921-kWRPP32q?accountId=rcf5071r&openerPlatform=native&openerKey=qrcode'),
                             ),
                             ButtonComponent(
                                 style='secondary',
@@ -292,6 +312,8 @@ def meatgood(event):
             event.reply_token, TextSendMessage(text='發生錯誤！'))
 
 # 孟軒外匯
+
+
 def tks(event):  # 多項傳送
     try:
         bubble = BubbleContainer(
@@ -387,7 +409,9 @@ def tks(event):  # 多項傳送
         line_bot_api.reply_message(
             event.reply_token, TextSendMessage(text='發生錯誤！'))
 
-#同學會位址
+# 同學會位址
+
+
 def sendPosition(event):  # 傳送位置
     try:
         message = LocationSendMessage(
@@ -401,7 +425,9 @@ def sendPosition(event):  # 傳送位置
         line_bot_api.reply_message(
             event.reply_token, TextSendMessage(text='發生錯誤！'))
 
-#快速選單
+# 快速選單
+
+
 def sendQuickreply(event):  # 快速選單
     try:
         message = TextSendMessage(
@@ -409,14 +435,14 @@ def sendQuickreply(event):  # 快速選單
             quick_reply=QuickReply(
                 items=[
                     QuickReplyButton(
-                        action=MessageAction(label="昂哥經歷與偉業?", text="誰是昂哥")
-                    ),
-                    # QuickReplyButton(
-                    #     action=MessageAction(
-                    #         label="昂哥尊容?", text="可以讓我看看昂哥有多屌嗎")
-                    # ),
-                    QuickReplyButton(
                         action=MessageAction(label="同學會資訊?", text="同學會辦在哪")
+                    ),
+                    QuickReplyButton(
+                        action=MessageAction(
+                            label="照片上傳相簿?", text="回憶相簿")
+                    ),
+                    QuickReplyButton(
+                        action=MessageAction(label="昂哥經歷與偉業?", text="誰是昂哥")
                     ),
                     QuickReplyButton(
                         action=MessageAction(label="昂哥系列貼圖?", text="我想買昂哥系列貼圖")
@@ -430,13 +456,8 @@ def sendQuickreply(event):  # 快速選單
                     ),
                     QuickReplyButton(
                         action=MessageAction(
-                            label="照片上傳相簿?", text="回憶相簿")
+                            label="周邊網頁?", text="周邊網頁介紹")
                     ),
-                    
-                    # QuickReplyButton(
-                    #     action=MessageAction(
-                    #         label="周邊網頁?", text="周邊網頁介紹")
-                    # ),
                 ]
             )
         )
@@ -445,7 +466,9 @@ def sendQuickreply(event):  # 快速選單
         line_bot_api.reply_message(
             event.reply_token, TextSendMessage(text='發生錯誤！'))
 
-#也許你想了解
+# 也許你想了解
+
+
 def error(event):  # 傳送錯誤文字
     try:
         message = TextSendMessage(
