@@ -76,7 +76,7 @@ def callback(request):
                     elif mtext == '我們最愛的師長':
                         func.thuai(event)
 
-                    elif mtext == '開啟相簿':
+                    elif mtext == '回憶相簿':
                         func.photo(event)
 
                     elif mtext == '更多服務+':
