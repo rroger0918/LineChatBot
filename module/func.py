@@ -288,7 +288,7 @@ def meatgood(event):
                 contents=[
                     TextComponent(text='蒜味肉紙，茗爺真心推薦 !',
                                   color='#888888', size='sm', align='center'),
-                ]｛
+                ]
             ),
         )
         message = FlexSendMessage(alt_text="蒜味肉紙，茗爺真心推薦", contents=bubble)

@@ -177,6 +177,27 @@ def sendMulti(event):  # 多項傳送
         line_bot_api.reply_message(
             event.reply_token, TextSendMessage(text='發生錯誤！'))
 
+def photo(event):  # 多項傳送
+    try:
+        message = [  # 串列
+            # StickerSendMessage(  #傳送貼圖
+            #     package_id='1',
+            #     sticker_id='5'
+            # ),
+            ImageSendMessage(  # 傳送圖片
+                original_content_url="https://images.unsplash.com/photo-1528569937393-ee892b976859?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+                preview_image_url="https://images.unsplash.com/photo-1528569937393-ee892b976859?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+            ),
+            TextSendMessage(  # 傳送y文字
+                text="https://photos.app.goo.gl/36HWVwogvUeEBWsB6"
+            )
+
+        ]
+        line_bot_api.reply_message(event.reply_token, message)
+    except:
+        line_bot_api.reply_message(
+            event.reply_token, TextSendMessage(text='發生錯誤！'))
+
 # 茗翔肉乾
 def meatgood(event):
     try:
