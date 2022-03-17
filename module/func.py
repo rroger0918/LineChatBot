@@ -26,14 +26,21 @@ def hi(event):
 # 集點卡
 def pointcard(event):
 
-    try:
-        message = [  # 串列
-         ButtonComponent(
-             style='link',
-             height='sm',
-             action=URIAction(
-                  label='集點卡👈', uri='https://liff.line.me/1654883656-XqwKRkd4?aid=760pvdld&utm_source=LINE&utm_medium=Owner&utm_campaign=Share'),
-         ),
+    try:        
+        message = [
+            TemplateSendMessage(
+                alt_text='Buttons template',
+                    template=ButtonsTemplate(
+                        title='集點卡',
+                        text='集滿2點，立即兌換!',
+                        actions=[
+                            MessageTemplateAction(
+                              label='👉集點GO',
+                              uri='https://liff.line.me/1654883656-XqwKRkd4?aid=760pvdld&utm_source=LINE&utm_medium=Owner&utm_campaign=Share'
+                            ),
+                        ]
+                    )
+            )                                   
         ]
         line_bot_api.reply_message(event.reply_token, message)
     except:
