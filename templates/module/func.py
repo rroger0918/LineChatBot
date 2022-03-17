@@ -389,15 +389,17 @@ def tks(event):  # 多項傳送
 #同學會位址
 def sendPosition(event):  # 傳送位置
     try:
-        message = LocationSendMessage(
+        message = [
+            LocationSendMessage(
             title='3/26 苗栗 愛在甜心',
             address='364 苗栗縣苗栗市苗栗縣大湖鄉富興村七鄰八寮灣33-5號',
             latitude=24.441221490905843,  # 緯度
             longitude=120.8743075203372  # 經度
-        ),            
-        TextSendMessage(  # 傳送y文字
+            ),            
+            TextSendMessage(  # 傳送y文字
                 text="https://thuform20211220233251.azurewebsites.net/Home/Theme"
-        )
+            )
+        ]
         line_bot_api.reply_message(event.reply_token, message)
     except:
         line_bot_api.reply_message(
