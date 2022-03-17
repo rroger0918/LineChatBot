@@ -33,7 +33,7 @@ def pointcard(event):
                 columns=[
                     ImageCarouselColumn(
                         image_url='https://upload.cc/i1/2022/03/18/JK4Ad1.jpgg',
-                        action=MessageTemplateAction(
+                        action=URITemplateAction(
                             image_url='https://upload.cc/i1/2022/03/18/JK4Ad1.jpg',
                             action= URITemplateAction(
                                 label='👉集點卡GO',
