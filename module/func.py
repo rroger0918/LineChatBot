@@ -27,25 +27,26 @@ def hi(event):
 def pointcard(event):
 
     try:        
-        message = [
-            TemplateSendMessage(
-                alt_text='Buttons template',
-                    template=ButtonsTemplate(
-                        title='集點卡',
-                        text='集滿2點，立即兌換!',
-                        actions=[
-                            MessageTemplateAction(
-                              label='👉集點GO',
-                              uri='https://liff.line.me/1654883656-XqwKRkd4?aid=760pvdld&utm_source=LINE&utm_medium=Owner&utm_campaign=Share'
-                            ),
-                        ]
-                    )
-            )                                   
-        ]
-        line_bot_api.reply_message(event.reply_token, message)
+        message = TemplateSendMessage(
+            alt_text='集點卡',
+            template=ImageCarouselTemplate(
+                columns=[
+                    ImageCarouselColumn(
+                        image_url='https://upload.cc/i1/2022/03/18/JK4Ad1.jpgg',
+                        action=MessageTemplateAction(
+                            image_url='https://upload.cc/i1/2022/03/18/JK4Ad1.jpg',
+                            action= URITemplateAction(
+                                label='👉集點卡GO',
+                                uri='https://liff.line.me/1654883656-XqwKRkd4?aid=760pvdld&utm_source=LINE&utm_medium=Owner&utm_campaign=Share'
+                            )
+                        )
+                    )                    
+                ]
+            )
+        )
+        line_bot_api.reply_message(event.reply_token,message)
     except:
-        line_bot_api.reply_message(
-            event.reply_token, TextSendMessage(text='發生錯誤！'))
+        line_bot_api.reply_message(event.reply_token,TextSendMessage(text='發生錯誤！'))
     
 # 誰是昂哥
 
