@@ -20,6 +20,23 @@ def hi(event):
     except:
         line_bot_api.reply_message(
             event.reply_token, TextSendMessage(text='發生錯誤！'))
+# 集點卡
+def pointcard(event):
+
+    try:
+        message = [  # 串列
+         ButtonComponent(
+             style='link',
+             height='sm',
+             action=URIAction(
+                  label='集點卡👈', uri='https://liff.line.me/1654883656-XqwKRkd4?aid=760pvdld&utm_source=LINE&utm_medium=Owner&utm_campaign=Share'),
+         ),
+        ]
+        line_bot_api.reply_message(event.reply_token, message)
+    except:
+        line_bot_api.reply_message(
+            event.reply_token, TextSendMessage(text='發生錯誤！'))
+
 # 誰是昂哥
 def sendFlex(event):
     
@@ -432,6 +449,10 @@ def sendQuickreply(event):  # 快速選單
                         action=MessageAction(
                             label="黑狗軒免運布朗尼?", text="我想買黑狗軒免運布朗尼")
                     ),
+                    QuickReplyButton(
+                        action=MessageAction(
+                            label="集點卡?", text="我想查看集點卡")
+                    ),
                     # QuickReplyButton(
                     #     action=MessageAction(
                     #         label="周邊網頁?", text="周邊網頁介紹")
@@ -474,6 +495,10 @@ def error(event):  # 傳送錯誤文字
                     QuickReplyButton(
                         action=MessageAction(
                             label="上傳旅遊相簿?", text="開啟相簿")
+                    ),
+                    QuickReplyButton(
+                        action=MessageAction(
+                            label="集點卡?", text="我想查看集點卡")
                     ),
                     # QuickReplyButton(
                     #     action=MessageAction(

@@ -82,6 +82,9 @@ def callback(request):
                     elif mtext == '更多服務+':
                         func.sendQuickreply(event)
                     
+                    elif mtext == '我想查看集點卡':
+                        func.pointcard(event)
+                    
                     else:
                         func.error(event)
 
