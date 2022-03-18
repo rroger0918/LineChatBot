@@ -27,13 +27,16 @@ def pointcard(event):
             alt_text='集點卡',
             template=ImageCarouselTemplate(
                 columns=[
+                    TextSendMessage(  # 傳送y文字
+                     text="點擊查看您的集點卡👇"
+                    ),  
                     ImageCarouselColumn(
-                        image_url='https://upload.cc/i1/2021/05/13/gK5sLk.jpg',
+                        image_url='https://upload.cc/i1/2022/03/18/oJLRPS.jpg',
                         action=URITemplateAction(
-                            label='抽❕❕❕',
+                            label='集❕❕❕',
                             uri='https://liff.line.me/1654883656-XqwKRkd4?aid=760pvdld&utm_source=LINE&utm_medium=Owner&utm_campaign=Share'
                         ),
-                    ),                             
+                    ),                                               
                 ]
             )
         )
