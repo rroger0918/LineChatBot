@@ -78,6 +78,9 @@ def callback(request):
 
                     elif mtext == '回憶相簿':
                         func.photo(event)
+                    
+                    elif mtext == '集點':
+                        func.pointcard(event)
 
                     elif mtext == '更多服務+':
                         func.sendQuickreply(event)
