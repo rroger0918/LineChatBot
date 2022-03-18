@@ -487,7 +487,7 @@ def sendQuickreply(event):  # 快速選單
                     ),
                     QuickReplyButton(
                         action=MessageAction(
-                            label="集點卡?", text="我想查看集點卡")
+                            label="集點卡?", text="集點")
                     ),
                     # QuickReplyButton(
                     #     action=MessageAction(
@@ -532,7 +532,7 @@ def error(event):  # 傳送錯誤文字
                     ),
                     QuickReplyButton(
                         action=MessageAction(
-                            label="集點卡?", text="我想查看集點卡")
+                            label="集點卡?", text="集點")
                     ),
                     # QuickReplyButton(
                     #     action=MessageAction(
