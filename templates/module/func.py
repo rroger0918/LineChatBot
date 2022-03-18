@@ -23,9 +23,7 @@ def hi(event):
 # 集點卡
 def pointcard(event):
     try:        
-        message = TextSendMessage(  # 傳送y文字
-                     text="點擊查看您的集點卡👇"
-            ),  TemplateSendMessage(
+        message = TemplateSendMessage(
             alt_text='集點卡',
             template=ImageCarouselTemplate(
                 columns=[                    
