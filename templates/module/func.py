@@ -31,7 +31,7 @@ def pointcard(event):
                         image_url='https://upload.cc/i1/2021/05/13/gK5sLk.jpg',
                         action=URITemplateAction(
                             label='訂閱姜老師🄰🄸頻道',
-                            uri='https://liff.line.me/1656959733-5gyYdjQx'
+                            uri='https://liff.line.me/1654883656-XqwKRkd4?aid=760pvdld&utm_source=LINE&utm_medium=Owner&utm_campaign=Share'
                         ),
                     ),                             
                 ]
