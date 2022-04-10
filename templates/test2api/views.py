@@ -26,7 +26,6 @@ def callback(request):
             if isinstance(event, MessageEvent):
                 if isinstance(event.message, TextMessage):
                     mtext = event.message.text
-                    msticker = event.message.
 
                     if mtext == '@彈性配置':
                         func.sendFlex(event)
