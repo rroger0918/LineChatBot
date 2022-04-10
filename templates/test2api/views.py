@@ -26,10 +26,10 @@ def callback(request):
             if isinstance(event, MessageEvent):
                 if isinstance(event.message, TextMessage):
                     mtext = event.message.text
+                    msticker = event.message.
 
                     if mtext == '@彈性配置':
                         func.sendFlex(event)
-    
 
                     elif mtext == '誰是昂哥':
                         func.sendFlex(event)
@@ -49,8 +49,8 @@ def callback(request):
                     elif mtext == '可以讓我看看昂哥有多屌嗎':
                         func.sendImage(event)
     
-                    # elif mtext == '@傳送貼圖':
-                    #     func.sendStick(event)
+                    elif mtext == '@傳送貼圖':
+                        func.sendStick(event)
     
                     elif mtext == '我想買昂哥系列貼圖':
                         func.sendMulti(event)

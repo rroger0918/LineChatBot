@@ -23,6 +23,20 @@ def hi(event):
         line_bot_api.reply_message(
             event.reply_token, TextSendMessage(text='發生錯誤！'))
 
+#昂哥貼圖
+def sendStick(event):  # 多項傳送
+    try:
+        message = [  # 串列
+            StickerSendMessage(  #傳送貼圖
+                package_id='1',
+                sticker_id='5'
+            )
+        ]
+        line_bot_api.reply_message(event.reply_token, message)
+    except:
+        line_bot_api.reply_message(
+            event.reply_token, TextSendMessage(text='發生錯誤！'))
+
 # 集點卡
 def pointcard(event):
 
